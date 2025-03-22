@@ -74,7 +74,7 @@ def send_email():
     except Exception as e:
         print(f"Error: {e}")
         flash("Something went wrong. Please try again.", "danger")
-        return redirect("/contact.html")
+        return redirect("/contact")
 
 if __name__ == "__main__":
     app.run(debug=True)
