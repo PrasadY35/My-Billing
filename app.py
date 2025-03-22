@@ -18,27 +18,23 @@ LOGIN_PASSWORD = "ffjh vofa uqym cvpd"  # Use an app password or SMTP password
 def index():
     return render_template("index.html")
 
-@app.route("/index.html")
-def home():
-    return render_template("index.html")
-
-@app.route("/about.html")
+@app.route("/about")
 def about():
     return render_template("about.html")
 
-@app.route("/features.html")
+@app.route("/features")
 def features():
     return render_template("features.html")
 
-@app.route("/pricing.html")
+@app.route("/pricing")
 def pricing():
     return render_template("pricing.html")
 
-@app.route("/contact.html")
+@app.route("/contact")
 def contact():
     return render_template("contact.html")
 
-@app.route('/problem.html')
+@app.route('/problem')
 def problem():
     return render_template("problem.html")
 
@@ -73,7 +69,7 @@ def send_email():
             server.sendmail(sender_email, LOGIN_EMAIL, msg.as_string())
 
         flash("Message sent successfully! ✅", "success")
-        return redirect("/contact.html")
+        return redirect("/contact")
 
     except Exception as e:
         print(f"Error: {e}")
