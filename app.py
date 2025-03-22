@@ -34,6 +34,10 @@ def pricing():
 def contact():
     return render_template("contact.html")
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return app.send_static_file('sitemap.xml')
+
 @app.route('/problem')
 def problem():
     return render_template("problem.html")
